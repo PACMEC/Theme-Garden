@@ -11,7 +11,7 @@
 
 get_header();
   if(route_active())
-  { get_template_part( 'template-parts/content/'.$GLOBALS['PACMEC']['route']->component ); }
+  { get_template_part( 'template-parts/content/'.$GLOBALS['PACMEC']['route']->layout ); }
   else
   { get_template_part( 'template-parts/content/content-error' ); }
 get_footer();
