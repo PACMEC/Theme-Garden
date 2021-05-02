@@ -52,9 +52,9 @@
             </a>
           </div>
           <nav class="menu-container">
-            <?php 
-			
-              $menu = \pacmec_load_menu('primary');
+            <?php
+
+              $menu = \pacmec_load_menu('primary_garden');
               if($menu !== false):
                 $r_html = "";
                 foreach ($menu->items as $key => $item) {
