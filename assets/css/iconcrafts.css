@@ -1,0 +1,474 @@
+@font-face {
+    font-family: 'iconcrafts';
+    src:    url('../fonts/iconcrafts.eot?7775vy');
+    src:    url('../fonts/iconcrafts.eot?7775vy#iefix') format('embedded-opentype'),
+        url('../fonts/iconcrafts.ttf?7775vy') format('truetype'),
+        url('../fonts/iconcrafts.woff?7775vy') format('woff'),
+        url('../fonts/iconcrafts.svg?7775vy#iconcrafts') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="craftico-"], [class*=" craftico-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'iconcrafts' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.craftico-activism:before {
+    content: "\e900";
+}
+.craftico-agriculture:before {
+    content: "\e901";
+}
+.craftico-air:before {
+    content: "\e902";
+}
+.craftico-air_01:before {
+    content: "\e903";
+}
+.craftico-air_02:before {
+    content: "\e904";
+}
+.craftico-air-pollution:before {
+    content: "\e905";
+}
+.craftico-air-quality:before {
+    content: "\e906";
+}
+.craftico-animals:before {
+    content: "\e907";
+}
+.craftico-apple-and-peache:before {
+    content: "\e908";
+}
+.craftico-atmosphere:before {
+    content: "\e909";
+}
+.craftico-atmosphere-on-earth:before {
+    content: "\e90a";
+}
+.craftico-autumn-rain:before {
+    content: "\e90b";
+}
+.craftico-autumn-tree:before {
+    content: "\e90c";
+}
+.craftico-bee:before {
+    content: "\e90d";
+}
+.craftico-bee_01:before {
+    content: "\e90e";
+}
+.craftico-beehive:before {
+    content: "\e90f";
+}
+.craftico-bicycle:before {
+    content: "\e910";
+}
+.craftico-biodiesel:before {
+    content: "\e911";
+}
+.craftico-bird:before {
+    content: "\e912";
+}
+.craftico-bird-house:before {
+    content: "\e913";
+}
+.craftico-butterfly:before {
+    content: "\e914";
+}
+.craftico-butterfly_01:before {
+    content: "\e915";
+}
+.craftico-carbon-emission:before {
+    content: "\e916";
+}
+.craftico-chestnut:before {
+    content: "\e917";
+}
+.craftico-chocolate-easter-bunny:before {
+    content: "\e918";
+}
+.craftico-clover:before {
+    content: "\e919";
+}
+.craftico-clover_01:before {
+    content: "\e91a";
+}
+.craftico-coal:before {
+    content: "\e91b";
+}
+.craftico-cup-of-tea:before {
+    content: "\e91c";
+}
+.craftico-cup-of-tea-and-books:before {
+    content: "\e91d";
+}
+.craftico-drafonfly:before {
+    content: "\e91e";
+}
+.craftico-drinking-water:before {
+    content: "\e91f";
+}
+.craftico-earth:before {
+    content: "\e920";
+}
+.craftico-earth_01:before {
+    content: "\e921";
+}
+.craftico-easter-bonnet:before {
+    content: "\e922";
+}
+.craftico-easter-bunny:before {
+    content: "\e923";
+}
+.craftico-easter-candy:before {
+    content: "\e924";
+}
+.craftico-easter-egg:before {
+    content: "\e925";
+}
+.craftico-easter-egg_01:before {
+    content: "\e926";
+}
+.craftico-easter-egg_02:before {
+    content: "\e927";
+}
+.craftico-easter-egg_03:before {
+    content: "\e928";
+}
+.craftico-easter-egg-basket:before {
+    content: "\e929";
+}
+.craftico-easter-lily:before {
+    content: "\e92a";
+}
+.craftico-eco:before {
+    content: "\e92b";
+}
+.craftico-eco-electric-power:before {
+    content: "\e92c";
+}
+.craftico-eco-electric-power_01:before {
+    content: "\e92d";
+}
+.craftico-eco-house:before {
+    content: "\e92e";
+}
+.craftico-eco-light-bulb:before {
+    content: "\e92f";
+}
+.craftico-eco-light-bulb_01:before {
+    content: "\e930";
+}
+.craftico-ecology-award:before {
+    content: "\e931";
+}
+.craftico-education:before {
+    content: "\e932";
+}
+.craftico-electric-car:before {
+    content: "\e933";
+}
+.craftico-electric-car-charging-station:before {
+    content: "\e934";
+}
+.craftico-electric-plug:before {
+    content: "\e935";
+}
+.craftico-electric-plug_01:before {
+    content: "\e936";
+}
+.craftico-electric-power:before {
+    content: "\e937";
+}
+.craftico-electric-socket:before {
+    content: "\e938";
+}
+.craftico-electric-socket_01:before {
+    content: "\e939";
+}
+.craftico-fabric-filter:before {
+    content: "\e93a";
+}
+.craftico-fire:before {
+    content: "\e93b";
+}
+.craftico-fire_01:before {
+    content: "\e93c";
+}
+.craftico-flower:before {
+    content: "\e93d";
+}
+.craftico-flower_01:before {
+    content: "\e93e";
+}
+.craftico-food:before {
+    content: "\e93f";
+}
+.craftico-forests:before {
+    content: "\e940";
+}
+.craftico-fossil-fuel:before {
+    content: "\e941";
+}
+.craftico-garden-tools:before {
+    content: "\e942";
+}
+.craftico-gas-tank:before {
+    content: "\e943";
+}
+.craftico-gas-tank_01:before {
+    content: "\e944";
+}
+.craftico-geothermal-energy:before {
+    content: "\e945";
+}
+.craftico-global-warming:before {
+    content: "\e946";
+}
+.craftico-global-warming_01:before {
+    content: "\e947";
+}
+.craftico-green-building:before {
+    content: "\e948";
+}
+.craftico-green-car:before {
+    content: "\e949";
+}
+.craftico-green-planet:before {
+    content: "\e94a";
+}
+.craftico-growing-plant:before {
+    content: "\e94b";
+}
+.craftico-habitat:before {
+    content: "\e94c";
+}
+.craftico-hazelnut:before {
+    content: "\e94d";
+}
+.craftico-honeycomb:before {
+    content: "\e94e";
+}
+.craftico-humans:before {
+    content: "\e94f";
+}
+.craftico-humans_01:before {
+    content: "\e950";
+}
+.craftico-hydropower:before {
+    content: "\e951";
+}
+.craftico-jar:before {
+    content: "\e952";
+}
+.craftico-kite:before {
+    content: "\e953";
+}
+.craftico-ladybug:before {
+    content: "\e954";
+}
+.craftico-ladybug_01:before {
+    content: "\e955";
+}
+.craftico-laws-and-regulations:before {
+    content: "\e956";
+}
+.craftico-leaf:before {
+    content: "\e957";
+}
+.craftico-leaf_01:before {
+    content: "\e958";
+}
+.craftico-leaf_02:before {
+    content: "\e959";
+}
+.craftico-leaves:before {
+    content: "\e95a";
+}
+.craftico-lifestyle:before {
+    content: "\e95b";
+}
+.craftico-minerals:before {
+    content: "\e95c";
+}
+.craftico-movember:before {
+    content: "\e95d";
+}
+.craftico-mushroom:before {
+    content: "\e95e";
+}
+.craftico-natural-gas:before {
+    content: "\e95f";
+}
+.craftico-natural-resources:before {
+    content: "\e960";
+}
+.craftico-nuclear-reactor:before {
+    content: "\e961";
+}
+.craftico-ocean:before {
+    content: "\e962";
+}
+.craftico-peace:before {
+    content: "\e963";
+}
+.craftico-planting:before {
+    content: "\e964";
+}
+.craftico-plants:before {
+    content: "\e965";
+}
+.craftico-politics:before {
+    content: "\e966";
+}
+.craftico-pumpjack:before {
+    content: "\e967";
+}
+.craftico-pumpkin:before {
+    content: "\e968";
+}
+.craftico-radioactive-waste:before {
+    content: "\e969";
+}
+.craftico-rainbow:before {
+    content: "\e96a";
+}
+.craftico-rake:before {
+    content: "\e96b";
+}
+.craftico-recycle:before {
+    content: "\e96c";
+}
+.craftico-recycling:before {
+    content: "\e96d";
+}
+.craftico-report:before {
+    content: "\e96e";
+}
+.craftico-research:before {
+    content: "\e96f";
+}
+.craftico-research_01:before {
+    content: "\e970";
+}
+.craftico-shovel:before {
+    content: "\e971";
+}
+.craftico-solar-pane:before {
+    content: "\e972";
+}
+.craftico-spring-day:before {
+    content: "\e973";
+}
+.craftico-spring-day_01:before {
+    content: "\e974";
+}
+.craftico-spring-grass:before {
+    content: "\e975";
+}
+.craftico-spring-rain:before {
+    content: "\e976";
+}
+.craftico-spring-sprout:before {
+    content: "\e977";
+}
+.craftico-spring-tree:before {
+    content: "\e978";
+}
+.craftico-spring-weather:before {
+    content: "\e979";
+}
+.craftico-study:before {
+    content: "\e97a";
+}
+.craftico-sun:before {
+    content: "\e97b";
+}
+.craftico-sunflower:before {
+    content: "\e97c";
+}
+.craftico-sustainability:before {
+    content: "\e97d";
+}
+.craftico-tree:before {
+    content: "\e97e";
+}
+.craftico-tree_01:before {
+    content: "\e97f";
+}
+.craftico-tree_02:before {
+    content: "\e980";
+}
+.craftico-tree_03:before {
+    content: "\e981";
+}
+.craftico-tree_04:before {
+    content: "\e982";
+}
+.craftico-tree_05:before {
+    content: "\e983";
+}
+.craftico-tree_06:before {
+    content: "\e984";
+}
+.craftico-trees:before {
+    content: "\e985";
+}
+.craftico-tulip-flower:before {
+    content: "\e986";
+}
+.craftico-umbrella:before {
+    content: "\e987";
+}
+.craftico-urban-planning:before {
+    content: "\e988";
+}
+.craftico-water:before {
+    content: "\e989";
+}
+.craftico-water_01:before {
+    content: "\e98a";
+}
+.craftico-water_02:before {
+    content: "\e98b";
+}
+.craftico-water-barrel:before {
+    content: "\e98c";
+}
+.craftico-water-conservation:before {
+    content: "\e98d";
+}
+.craftico-water-drop:before {
+    content: "\e98e";
+}
+.craftico-watering-can:before {
+    content: "\e98f";
+}
+.craftico-water-pollution:before {
+    content: "\e990";
+}
+.craftico-weather:before {
+    content: "\e991";
+}
+.craftico-wheelbarrow:before {
+    content: "\e992";
+}
+.craftico-wind:before {
+    content: "\e993";
+}
+.craftico-wind-power:before {
+    content: "\e994";
+}
+
