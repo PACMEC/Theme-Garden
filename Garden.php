@@ -19,7 +19,6 @@
 function pacmec_Theme_Garden_activation()
 {
   try {
-    require_once 'includes/shortcodes.php';
 	/**
 	* Head
 	*/
