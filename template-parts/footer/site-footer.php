@@ -6,10 +6,11 @@
  * @category   Garden
  * @version    1.0.1
  */
+$url_logo_alt = siteinfo('sitelogo_alt');
 ?>
 <style>
 #tree_bg {
-  background-image: url('https://pacmec.monteverdeltda.com/uploads/2021/00/bg_footer.jpg');
+  background-image: url('<?= $url_logo_alt; ?>');
   background-repeat: no-repeat;
 }
 </style>
