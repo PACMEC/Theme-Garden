@@ -6,6 +6,7 @@
  * @category   Garden
  * @version    1.0.1
  */
+
 ?>
 <header id="header" class="header-version2">
   <div class="header-top">
@@ -24,7 +25,8 @@
                         $r_html = "";
                         foreach ($menu->items as $key => $item1) {
                           $item1->class = [$item1->title."-color"];
-                          $r_html .= \pacmec_menu_item_to_li($item1, '_blank', false, false, false);
+							$r_html .= pacmec_menu_item_to_li($item, ['has-children'], [], true, true, true, ['sub-menu'], [], []);
+                          // $r_html .= \pacmec_menu_item_to_li($item1, '_blank', false, false, false);
                         }
                         echo \PHPStrap\Util\Html::tag("ul", $r_html, ['header-social social-icon'], []);
                       }
@@ -50,12 +52,14 @@
             </a>
           </div>
           <nav class="menu-container">
-            <?php
+            <?php 
+			
               $menu = \pacmec_load_menu('primary');
               if($menu !== false):
                 $r_html = "";
-                foreach ($menu->items as $key => $item1) {
-                  $r_html .= pacmec_menu_item_to_li($item1, NULL, true, true, false);
+                foreach ($menu->items as $key => $item) {
+					$r_html .= pacmec_menu_item_to_li($item, ['has-children'], [], true, true, true, ['sub-menu'], [], []);
+					//$r_html .= pacmec_menu_item_to_li($item1, NULL, true, true, false);
                 }
               ?>
               <ul id="menu" class="sm me-menu">
