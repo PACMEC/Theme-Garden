@@ -14,19 +14,17 @@
           <div class="row">
               <div class="col-md-12">
                   <ul class="header-info pull-left">
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> <?= _autoT('about_sales'); ?> </li>
-                    <li><a href="mailto:<?= _autoT('about_email'); ?>"><i class="fa fa-envelope" aria-hidden="true"></i> <?= _autoT('about_email'); ?> </a></li>
-                    <?= "<li><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>"._autoT('business_hours')."</li>"; ?>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> <?= infosite('business_phone_number'); ?> </li>
+                    <li><a href="mailto:<?= infosite('business_email'); ?>"><i class="fa fa-envelope" aria-hidden="true"></i> <?= infosite('business_email'); ?> </a></li>
+                    <?= "<li><i class=\"fa fa-clock-o\" aria-hidden=\"true\"></i>".infosite('business_hours')."</li>"; ?>
                   </ul>
                   <div class="pull-right">
                     <?php
-                      $menu = \pacmec_load_menu('social_links');
+                      $menu = \pacmec_load_menu('socials_links');
                       if($menu !== false){
                         $r_html = "";
-                        foreach ($menu->items as $key => $item1) {
-                          $item1->class = [$item1->title."-color"];
-							$r_html .= pacmec_menu_item_to_li($item, ['has-children'], [], true, true, true, ['sub-menu'], [], []);
-                          // $r_html .= \pacmec_menu_item_to_li($item1, '_blank', false, false, false);
+                        foreach ($menu->items as $key => $item) {
+                          $r_html .= pacmec_menu_item_to_li($item, [], [], false, true, true, [], [], []);
                         }
                         echo \PHPStrap\Util\Html::tag("ul", $r_html, ['header-social social-icon'], []);
                       }

@@ -15,44 +15,45 @@
  * @version    1.0.1
  *
  */
- 
+
 function pacmec_Theme_Garden_activation()
 {
   try {
-	/**
-	* Head
-	*/
-	add_style_head(folder_theme("garden")."/assets/css/bootstrap.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
-	add_style_head(folder_theme("garden")."/assets/css/foundstrap.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
-	add_style_head(folder_theme("garden")."/assets/css/font-awesome.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
-	add_style_head(folder_theme("garden")."/assets/css/iconcrafts.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    require_once 'includes/shortcodes.php';
+    /**
+    * Head
+    */
+    add_style_head(folder_theme("garden")."/assets/css/bootstrap.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/foundstrap.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/font-awesome.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/iconcrafts.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
 
-	add_style_head(folder_theme("garden")."/assets/css/flexslider.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
-	add_style_head(folder_theme("garden")."/assets/css/animate.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
-	add_style_head(folder_theme("garden")."/assets/css/owl-carousel.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
-	add_style_head(folder_theme("garden")."/assets/css/smartmenu.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/flexslider.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/animate.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/owl-carousel.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/smartmenu.min.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
 
-	add_style_head(folder_theme("garden")."/assets/css/style.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
-	add_style_head(folder_theme("garden")."/assets/css/responsive.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/style.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
+    add_style_head(folder_theme("garden")."/assets/css/responsive.css", ["rel"=>"stylesheet", "type"=>"text/css", "charset"=>"UTF-8"], 0.8, true);
 
-	/**
-	* Footer
-	*/
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery-3.5.1.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot("https://maps.google.com/maps/api/js?key=".infosite('ga_key_js')."&libraries=places&v=weekly", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/bootstrap.bundle.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.smartmenus.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.waypoints.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.scrollUp.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    /**
+    * Footer
+    */
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery-3.5.1.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot("https://maps.google.com/maps/api/js?key=".infosite('ga_key_js')."&libraries=places&v=weekly", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/bootstrap.bundle.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.smartmenus.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.waypoints.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.scrollUp.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
 
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.flexslider-min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/owl.carousel.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.countTo.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.parallax.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/isotope.pkgd.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.easypiechart.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/jquery.maps.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
-	add_scripts_foot(folder_theme("garden")."/assets/js/config.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.flexslider-min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/owl.carousel.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.countTo.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.parallax.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/isotope.pkgd.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.easypiechart.min.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/jquery.maps.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
+    add_scripts_foot(folder_theme("garden")."/assets/js/config.js", ["type"=>"text/javascript", "charset"=>"UTF-8"], 0.8, true);
     $tbls = [];
     foreach ($tbls as $tbl) {
       if(!pacmec_tbl_exist($tbl)){
@@ -63,7 +64,7 @@ function pacmec_Theme_Garden_activation()
     echo $e->getMessage();
     exit;
   }
-  
+
 	function garden_footer_trees($atts, $content="")
 	{
 	  $args = \shortcode_atts([
