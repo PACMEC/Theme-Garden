@@ -4,23 +4,10 @@
  * @author     FelipheGomez <feliphegomez@gmail.com>
  * @package    Themes
  * @category   System
- * @copyright  2020-2021 Manager Technology CO
+ * @copyright  2020-2021 FelipheGomez
  * @version    1.0.1
 */
 ?>
-<div class="section">
-  <div class="breadcrumb-area bg-light">
-    <div class="container-fluid">
-      <div class="breadcrumb-content text-center">
-        <h1 class="title">Login | Register</h1>
-        <ul>
-          <li><a href="<?= \infosite('siteurl'); ?>">Inicio </a></li>
-          <li class="active"> Login | Register</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="section section-margin">
   <div class="container">
@@ -37,7 +24,6 @@
         <div class="register-wrapper">
           <div class="section-content text-center mb-5">
             <h2 class="title mb-2"><?= __a('meregister'); ?></h2>
-            <p class="desc-content">Please Register using account detail bellow.</p>
           </div>
           <?= do_shortcode('[pacmec-form-register][/pacmec-form-register]'); ?>
 

@@ -416,7 +416,9 @@ h6 {
 /* ==========================================================================
        button
        ========================================================================== */
+/*
 .btn {
+  zoom: 1;
   padding: 13px 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -437,11 +439,14 @@ h6 {
 .btn:hover {
   color: #fff;
 }
+*/
+
 .btn.btn-round {
   -moz-border-radius: 500px;
   -webkit-border-radius: 500px;
   border-radius: 500px;
 }
+/*
 .btn i {
   font-size: 18px;
   margin-left: 10px;
@@ -454,6 +459,8 @@ h6 {
 .btn + .btn-block {
   margin-left: 0;
 }
+*/
+
 .btn.btn-link {
   color: #87ba45;
   padding-left: 0;
@@ -465,7 +472,7 @@ h6 {
 }
 
 .btn.btn-outline {
-  padding: 13px 30px;
+  /* padding: 13px 30px; */
   background-color: transparent;
   border: 2px solid #87ba45;
   color: #87ba45;
@@ -475,6 +482,7 @@ h6 {
   color: #fff;
 }
 
+/*
 .btn.btn-sm {
   padding: 10px 24px;
   font-size: 12px;
@@ -484,6 +492,7 @@ h6 {
 .btn.btn-lg {
   padding: 15px 32px;
 }
+*/
 
 .btn-block + .btn-block {
   margin-left: 0;
@@ -524,7 +533,7 @@ h6 {
 }
 
 .btn-border {
-  padding: 12px 29px;
+  /* padding: 12px 29px; */
   border: 2px solid #fff;
   background: transparent;
   color: #fff;

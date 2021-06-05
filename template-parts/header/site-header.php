@@ -6,7 +6,10 @@
  * @category   Garden
  * @version    1.0.1
  */
-
+global $PACMEC;
+$page_section = isset($PACMEC['fullData']['tab']) ? $PACMEC['fullData']['tab'] : 'dashboard';
+$meinfo = meinfo();
+$notifications = \PACMEC\System\Notifications::get_all_by_user_id(null, false);
 ?>
 <header id="header" class="header-version2">
   <div class="header-top">
@@ -50,19 +53,14 @@
             </a>
           </div>
           <nav class="menu-container">
-            <?php
-
-              $menu = \pacmec_load_menu('primary_garden');
-              if($menu !== false):
-                $r_html = "";
-                foreach ($menu->items as $key => $item) {
-					$r_html .= pacmec_menu_item_to_li($item, ['has-children'], [], true, true, true, ['sub-menu'], [], []);
-					//$r_html .= pacmec_menu_item_to_li($item1, NULL, true, true, false);
-                }
-              ?>
-              <ul id="menu" class="sm me-menu">
-                <?php
-                  echo $r_html;
+            <ul id="menu" class="sm me-menu">
+              <?php
+                $menu = \pacmec_load_menu('primary_garden');
+                if($menu !== false):
+                  foreach ($menu->items as $key => $item) {
+          					echo pacmec_menu_item_to_li($item, ['has-children'], [], true, true, true, ['sub-menu'], [], []);
+          					//$r_html .= pacmec_menu_item_to_li($item1, NULL, true, true, false);
+                  }
                 ?>
                 <li class="mega-menu">
                     <a href="#">
@@ -105,7 +103,7 @@
                 </li>
                 <?php if(isGuest()): ?>
                   <li>
-                    <a href="<?= infosite('siteurl')."/pacmec-form-sign"; ?>">
+                    <a href="<?= __url_s("/%pacmec_signin%"); ?>">
                       <i class="fa fa-sign-out" aria-hidden="true"></i> <?= _autoT('signin'); ?>
                     </a>
                   </li>
@@ -117,7 +115,7 @@
                               <div class="mega-menu-container">
                                   <div class="row">
                                       <div class="col-md-5">
-                                          <h5 class="mega-menu-title"><?= _autoT('meaccount'); ?></h5>
+                                          <h5 class="mega-menu-title"><?= _autoT('me_account'); ?></h5>
                                           <div class="row">
                                               <div class="col-md-6">
                                                   <ul class="mega-menu-list">
@@ -153,46 +151,52 @@
                       </ul>
                   </li>
                   -->
-                  <li class="mega-menu"><a href="#"><i class="fal fa-user-circle" aria-hidden="true"></i> <?= _autoT('meaccount'); ?></a>
-                      <ul class="mega-menu">
-                          <li>
-                              <div class="mega-menu-container">
-                                  <div class="row">
-                                      <div class="col-md-5">
-                                          <h5 class="mega-menu-title"><?= _autoT('meaccount'); ?></h5>
-                                          <div class="row">
-                                              <div class="col-md-6">
-                                                  <ul class="mega-menu-list">
-                                                      <li><a href="YYYYYYYYYYY">Mis facturas</a></li>
-                                                  </ul>
-                                              </div>
-                                              <div class="col-md-6">
-                                                  <ul class="mega-menu-list responsive-no-border">
-                                                      <li><a href="YYYYYYYYYYY">Mis direcciones</a></li>
-                                                      <li><a href="YYYYYYYYYYY">Mis metodos de pago</a></li>
-                                                  </ul>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="col-md-4">
-                                          <h5 class="mega-menu-title"></h5>
-                                          <ul class="mega-menu-list me-list arrow-list">
-                                              <li><a href="YYYYYYYYYYY">Actualizar datos</a></li>
-                                              <li><a href="YYYYYYYYYYY">Cambiar contraseña</a></li>
-                                          </ul>
-                                      </div>
-                                      <div class="col-md-3">
-                                          <h5 class="mega-menu-title"><?= _autoT('other_links'); ?></h5>
-                                          <ul class="mega-menu-list">
-                                              <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i> Portal empleados </a></li>
-                                              <li><a href="/pacmec-close-session"><i class="fa fa-sign-out" aria-hidden="true"></i> <?= _autoT('signout'); ?></a></li>
-                                          </ul>
-                                      </div>
-                                  </div>
-                                  <img class="mega-menu-img" src="img/megamenu-bg.png" data-position="right bottom" alt="mega menu image">
+                  <li class="mega-menu"><a href="#"><i class="fal fa-user-circle" aria-hidden="true"></i> <?= _autoT('me_account'); ?></a>
+                    <ul class="mega-menu">
+                      <li>
+                        <div class="mega-menu-container">
+                          <div class="row">
+                            <div class="col-md-5">
+                              <h5 class="mega-menu-title"><?= _autoT('me_account'); ?></h5>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <ul class="mega-menu-list">
+                                    <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>dashboard"          <?= $page_section=='dashboard'?          ' class="active" ' : ''; ?>><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                      	            <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>notifications"          <?= $page_section=='notifications'?  ' class="active" ' : ''; ?>><i class="fa fa-bell-o"></i> <?= __a('me_notifications') . " (" . count(\PACMEC\System\Notifications::get_all_by_user_id(null, false)) . ")"; ?></a></li>
+                                    <?php if (infosite('address_in_users')==true): ?>
+                                      <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>me_addresses"        <?= $page_section=='me_addresses'?      ' class="active" ' : ''; ?>><i class="fa fa-map-marker"></i> <?= __a('me_addresses'); ?></a></li>
+                                    <?php endif; ?>
+                                  </ul>
+                                </div>
+                                <div class="col-md-6">
+                                  <ul class="mega-menu-list responsive-no-border">
+                                    <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>me_account_details" <?= $page_section=='me_account_details'? ' class="active" ' : ''; ?>><i class="pe-7s-news-paper"></i> <?= __a('me_account_details'); ?></a></li>
+                                    <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>change_pass"        <?= $page_section=='change_pass'?        ' class="active" ' : ''; ?>><i class="pe-7s-news-paper"></i> <?= __a('change_pass'); ?></a></li>
+                                    <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>me_access_details"  <?= $page_section=='me_access_details'?  ' class="active" ' : ''; ?>><i class="pe-7s-news-paper"></i> <?= __a('me_access_details'); ?></a></li>
+                                  </ul>
+                                </div>
                               </div>
-                          </li>
-                      </ul>
+                            </div>
+                            <div class="col-md-4">
+                              <h5 class="mega-menu-title">&nbsp;</h5>
+                              <ul class="mega-menu-list me-list arrow-list">
+                                <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>me_orders"          <?= $page_section=='me_orders'?          ' class="active" ' : ''; ?>><i class="pe-7s-news-paper"></i> <?= __a('me_orders'); ?></a></li>
+                                <li><a href="<?= __url_s("/%pacmec_meaccount%?tab="); ?>me_payments"        <?= $page_section=='me_payments'?        ' class="active" ' : ''; ?>><i class="pe-7s-news-paper"></i> <?= __a('me_payments'); ?></a></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-3">
+                              <h5 class="mega-menu-title"></h5>
+                              <h5 class="mega-menu-title"><?= _autoT('other_links'); ?></h5>
+                              <ul class="mega-menu-list">
+                                <li><a href="https://empleados.monteverdeltda.com/"><i class="fa fa-users" aria-hidden="true"></i> Portal empleados </a></li>
+                                <li><a href="?pacmec_close=1"><i class="fa fa-sign-out" aria-hidden="true"></i> <?= _autoT('signout'); ?></a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <img class="mega-menu-img" src="img/megamenu-bg.png" data-position="right bottom" alt="mega menu image">
+                        </div>
+                      </li>
+                    </ul>
                   </li>
                 <?php endif; ?>
               </ul>
